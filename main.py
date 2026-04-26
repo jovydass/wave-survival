@@ -228,6 +228,11 @@ while running:
 
     # --- DRAW ---
     screen.fill((30, 30, 30))
+    # HP BAR
+    hp_ratio = player.hp / player.max_hp
+    pygame.draw.rect(screen, (80, 80, 80), (10, 10, 200, 20))
+    pygame.draw.rect(screen, (50, 200, 80), (10, 10, 200 * hp_ratio, 20))
+    pygame.draw.rect(screen, (255, 255, 255), (10, 10, 200, 20), 2)
 
     # EXP BAR
     bar_x = 250
